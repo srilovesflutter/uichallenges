@@ -1,5 +1,7 @@
 # Flutter UI Challenges
 
+# Click on the Image to go to the Project
+
 Onboarding Example 
 
 [<img src="assets/CafitUI_Onboarding_output.gif" height="600em" />](/cafitui)
