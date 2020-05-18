@@ -2,7 +2,7 @@
 
 Onboarding Example 
 
-<img src="assets/FlightsUI_output.gif" height="600em" />
+<img src="assets/CafitUI_Onboarding_output.gif" height="600em" />
 
 UI reference - https://www.xdguru.com/cafit-gym-workout-mobile-ui-kit/
 
