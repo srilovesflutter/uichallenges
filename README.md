@@ -4,6 +4,8 @@
 
 Onboarding Example 
 
+Here is an example of how to develop it, https://youtu.be/D2OuOUMR-u4
+
 [<img src="assets/CafitUI_Onboarding_output.gif" height="600em" />](/cafitui)
 
 UI reference - https://www.xdguru.com/cafit-gym-workout-mobile-ui-kit/
