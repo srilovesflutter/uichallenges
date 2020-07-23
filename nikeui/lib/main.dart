@@ -1,247 +1,252 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyPage2());
+  runApp(MyApp());
 }
 
-class MyPage2 extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyPage2Content(),
-    );
-  }
-}
-
-class MyPage2Content extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-                child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(
-                  Icons.arrow_back_ios,
-                  size: 30.0,
-                ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.bookmark,
-                      size: 30.0,
-                    ),
-                  ],
-                )
-              ],
+        home: Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.arrow_back_ios),
+      ),
+      bottomNavigationBar: Container(
+        height: 50,
+        color: Colors.blueAccent,
+        child: FlatButton(
+            onPressed: null,
+            child: Text(
+              'PAY \$50',
+              style: TextStyle(color: Colors.white),
             )),
-          ),
-        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: Stack(children: [
-              Positioned(
-                left: -150.0,
-                child: Container(
-                  width: 400.0,
-                  height: 400.0,
-                  decoration:
-                      BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
-                ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Payment method',
+              style: TextStyle(
+                fontFamily: 'Futura',
+                fontSize: 24,
+                color: const Color(0xff282c40),
+                letterSpacing: -0.648,
+                fontWeight: FontWeight.w700,
               ),
-              Positioned(
-                left: 0.0,
-                right: 0.0,
-                child: Container(
-                  width: 100.0,
-                  height: 100.0,
-                  child: Center(child: Text('\$45')),
-                  decoration: BoxDecoration(
-                      color: Colors.white, shape: BoxShape.circle),
-                ),
-              ),
-              Positioned(
-                bottom: 50.0,
-                left: 0.0,
-                right: 0.0,
-                child: Image(
-                    height: 240.0,
-                    width: 350.0,
-                    image: NetworkImage(
-                        'https://freepngimg.com/thumb/shoes/27428-5-nike-shoes-transparent-background.png')),
-              ),
-            ]),
+            ),
           ),
-          Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Nick Air Max',
-                      style: TextStyle(
-                        fontFamily: 'Futura',
-                        fontSize: 23,
-                        color: const Color(0xff282c40),
-                        letterSpacing: -0.621,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey[300]),
-                          borderRadius: BorderRadius.circular(22)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              'ADD TO BAG',
-                              style: TextStyle(
-                                fontFamily: 'Futura',
-                                fontSize: 10,
-                                color: const Color(0xff282c40),
-                                letterSpacing: -0.27,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            Icon(Icons.shopping_basket)
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.grey[400],
-                        )
-                      ],
-                    ),
-                    Container(
-                      child: Row(
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment(0.6,
+                          0.0), // 10% of the width, so there are ten blinds.
+                      colors: [
+                        //#233C67 26406E
+                        const Color(0xFF233C67),
+                        const Color(0xFF26406E),
+                      ], // whitish to gray
+                      tileMode: TileMode
+                          .repeated, // repeats the gradient over the canvas
+                    )),
+                // color: Colors.blueAccent,
+                child: Padding(
+                  padding: const EdgeInsets.all(35.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text('4.1'),
-                          Icon(Icons.star),
-                          Text('|'),
-                          Text('(340)')
+                          Image(
+                            height: 20.0,
+                            width: 50.0,
+                            image: NetworkImage(
+                                'http://www.cosgroveny.com/wp-content/uploads/logos/visa-white-shadow.png'),
+                          )
                         ],
                       ),
-                    )
-                  ],
-                ),
-                Text(
-                  'The Nike GTX shoe borrows design lines from The heritage runners the Nike Reach tech.',
-                  style: TextStyle(
-                    fontFamily: 'Futura',
-                    fontSize: 16,
-                    color: const Color(0x63282c40),
-                    letterSpacing: 0.336,
-                    fontWeight: FontWeight.w500,
-                    height: 1.8125,
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      Row(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 5.0,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              Icon(
+                                Icons.star,
+                                size: 10.0,
+                                color: Colors.white,
+                              ),
+                              SizedBox(
+                                width: 20.0,
+                              ),
+                              Text(
+                                '4567',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 45.0,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            children: [
+                              Text(
+                                'CARD HOLDER',
+                                style: TextStyle(
+                                  fontFamily: 'Futura',
+                                  fontSize: 11,
+                                  color: const Color(0x44ffffff),
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Text(
+                                'ELAYAMANIK',
+                                style: TextStyle(
+                                  fontFamily: 'Futura',
+                                  fontSize: 13,
+                                  color: const Color(0xffffffff),
+                                  letterSpacing: 0.481,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text(
+                                'EXPIRES',
+                                style: TextStyle(
+                                  fontFamily: 'Futura',
+                                  fontSize: 11,
+                                  color: const Color(0x44ffffff),
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Text(
+                                '3 MARCH',
+                                style: TextStyle(
+                                  fontFamily: 'Futura',
+                                  fontSize: 13,
+                                  color: const Color(0xffffffff),
+                                  letterSpacing: 0.481,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text(
+                                'CVV',
+                                style: TextStyle(
+                                  fontFamily: 'Futura',
+                                  fontSize: 11,
+                                  color: const Color(0x44ffffff),
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Text(
+                                '907',
+                                style: TextStyle(
+                                  fontFamily: 'Futura',
+                                  fontSize: 13,
+                                  color: const Color(0xffffffff),
+                                  letterSpacing: 0.481,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      )
+                    ],
                   ),
-                ),
-                SizedBox(height: 10.0),
-                Text(
-                  'Size',
-                  style: TextStyle(
-                    fontFamily: 'Futura',
-                    fontSize: 16,
-                    color: const Color(0xff282c40),
-                    letterSpacing: -0.432,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    Container(
-                      child: Text('5.5'),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: Text('6'),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: Text('6.5'),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: Text('7'),
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Container(
-                      child: Text('7.5'),
-                    )
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Text(
-                  'Colour shown',
-                  style: TextStyle(
-                    fontFamily: 'Futura',
-                    fontSize: 16,
-                    color: const Color(0xff282c40),
-                    letterSpacing: -0.432,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
+                )),
           )
         ],
       ),
-      bottomNavigationBar: Container(
-        color: Colors.blue,
-        child: FlatButton(
-            onPressed: null,
-            child: Text(
-              'BUY NOW',
-              style: TextStyle(color: Colors.white),
-            )),
-      ),
-    );
+    ));
   }
 }
