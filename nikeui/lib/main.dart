@@ -10,242 +10,144 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios),
+        backgroundColor: Colors.blueAccent,
+        actions: [IconButton(icon: Icon(Icons.cancel), onPressed: null)],
       ),
-      bottomNavigationBar: Container(
-        height: 50,
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
         color: Colors.blueAccent,
-        child: FlatButton(
-            onPressed: null,
-            child: Text(
-              'PAY \$50',
-              style: TextStyle(color: Colors.white),
-            )),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Payment method',
-              style: TextStyle(
-                fontFamily: 'Futura',
-                fontSize: 24,
-                color: const Color(0xff282c40),
-                letterSpacing: -0.648,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment(0.6,
-                          0.0), // 10% of the width, so there are ten blinds.
-                      colors: [
-                        //#233C67 26406E
-                        const Color(0xFF233C67),
-                        const Color(0xFF26406E),
-                      ], // whitish to gray
-                      tileMode: TileMode
-                          .repeated, // repeats the gradient over the canvas
-                    )),
-                // color: Colors.blueAccent,
-                child: Padding(
-                  padding: const EdgeInsets.all(35.0),
+        child: Center(
+          child: Stack(
+            children: [
+              Positioned(
+                  left: 30.0,
+                  top: 20.0,
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                  )),
+              Positioned(
+                  right: 100.0,
+                  top: 60.0,
+                  child: Container(
+                    height: 20.0,
+                    width: 20.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white54, shape: BoxShape.circle),
+                  )),
+              Positioned(
+                  left: 100.0,
+                  top: 100.0,
+                  child: Container(
+                    height: 20.0,
+                    width: 20.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white30, shape: BoxShape.circle),
+                  )),
+              Positioned(
+                  right: 100.0,
+                  top: 260.0,
+                  child: Container(
+                    height: 20.0,
+                    width: 20.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white38, shape: BoxShape.circle),
+                  )),
+              Positioned(
+                  right: 150.0,
+                  top: 460.0,
+                  child: Container(
+                    height: 20.0,
+                    width: 20.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white54, shape: BoxShape.circle),
+                  )),
+              Positioned(
+                  left: 100.0,
+                  top: 500.0,
+                  child: Container(
+                    height: 20.0,
+                    width: 20.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white54, shape: BoxShape.circle),
+                  )),
+              Positioned(
+                  left: 50.0,
+                  top: 400.0,
+                  child: Container(
+                    height: 20.0,
+                    width: 20.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white30, shape: BoxShape.circle),
+                  )),
+              Center(
                   child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Image(
-                            height: 20.0,
-                            width: 50.0,
-                            image: NetworkImage(
-                                'http://www.cosgroveny.com/wp-content/uploads/logos/visa-white-shadow.png'),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 30.0,
-                      ),
-                      Row(
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 10.0,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 20.0,
-                              ),
-                              Text(
-                                '4567',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 45.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                'CARD HOLDER',
-                                style: TextStyle(
-                                  fontFamily: 'Futura',
-                                  fontSize: 11,
-                                  color: const Color(0x44ffffff),
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Text(
-                                'ELAYAMANIK',
-                                style: TextStyle(
-                                  fontFamily: 'Futura',
-                                  fontSize: 13,
-                                  color: const Color(0xffffffff),
-                                  letterSpacing: 0.481,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              )
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                'EXPIRES',
-                                style: TextStyle(
-                                  fontFamily: 'Futura',
-                                  fontSize: 11,
-                                  color: const Color(0x44ffffff),
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Text(
-                                '3 MARCH',
-                                style: TextStyle(
-                                  fontFamily: 'Futura',
-                                  fontSize: 13,
-                                  color: const Color(0xffffffff),
-                                  letterSpacing: 0.481,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                'CVV',
-                                style: TextStyle(
-                                  fontFamily: 'Futura',
-                                  fontSize: 11,
-                                  color: const Color(0x44ffffff),
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10.0,
-                              ),
-                              Text(
-                                '907',
-                                style: TextStyle(
-                                  fontFamily: 'Futura',
-                                  fontSize: 13,
-                                  color: const Color(0xffffffff),
-                                  letterSpacing: 0.481,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      )
-                    ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.check_circle,
+                    color: Colors.white,
+                    size: 90.0,
                   ),
-                )),
-          )
-        ],
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Text(
+                    'ORDER PLACED',
+                    style: TextStyle(
+                      fontFamily: 'Futura',
+                      fontSize: 21,
+                      color: const Color(0xffffffff),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                            color: Colors.blueAccent[100],
+                            borderRadius: BorderRadius.circular(6.0),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Expected Delivery',
+                                  style: TextStyle(
+                                    fontFamily: 'Futura',
+                                    fontSize: 16,
+                                    color: const Color(0x4fffffff),
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 20.0,
+                                ),
+                                Text(
+                                  '13 DEC',
+                                  style: TextStyle(
+                                    fontFamily: 'Futura',
+                                    fontSize: 17,
+                                    color: const Color(0xffffffff),
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )),
+                    ],
+                  )
+                ],
+              ))
+            ],
+          ),
+        ),
       ),
     ));
   }
